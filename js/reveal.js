@@ -2870,6 +2870,7 @@
 				var backgroundImage = slide.getAttribute( 'data-background-image' ),
 					backgroundVideo = slide.getAttribute( 'data-background-video' ),
 					backgroundVideoLoop = slide.hasAttribute( 'data-background-video-loop' ),
+					backgroundVideoControls = slide.hasAttribute( 'data-background-video-controls' ),
 					backgroundIframe = slide.getAttribute( 'data-background-iframe' );
 
 				// Images
@@ -2882,6 +2883,10 @@
 
 					if( backgroundVideoLoop ) {
 						video.setAttribute( 'loop', '' );
+					}
+
+					if( backgroundVideoControls ) {
+						video.setAttribute( 'controls', '' );
 					}
 
 					// Support comma separated lists of video sources
